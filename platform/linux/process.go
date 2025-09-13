@@ -4,11 +4,6 @@ package linux
 
 // if your OS is linux, you can uncomment the code below
 
-/** import (
-	"os"
-	"golang.org/x/sys/unix"
-)
-
 type LinuxProcessManager struct{}
 
 func NewLinuxProcessManager() *LinuxProcessManager {
@@ -16,10 +11,16 @@ func NewLinuxProcessManager() *LinuxProcessManager {
 }
 
 func (pm *LinuxProcessManager) SetPriority(pid int32, level int) error {
-	return unix.Setpriority(unix.PRIO_PROCESS, int(pid), level)
+	// if your os is linux, uncomment the code below
+	// return unix.Setpriority(unix.PRIO_PROCESS, int(pid), level)
+
+	// if your os is linux, comment the code below
+	return nil
 }
 
 func (pm *LinuxProcessManager) KillProcess(pid int32) error {
+	// if your os is linux, uncomment the code below
+	/**
 	proc, err := os.FindProcess(int(pid))
 
 	if err != nil {
@@ -27,5 +28,8 @@ func (pm *LinuxProcessManager) KillProcess(pid int32) error {
 	}
 
 	return proc.Kill()
+	**/
+
+	// if your os is linux, comment the code below
+	return nil
 }
-**/

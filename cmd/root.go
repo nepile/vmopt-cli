@@ -9,7 +9,7 @@ import (
 var rootCmd *cobra.Command = &cobra.Command{
 	Use:   "vmopt",
 	Short: "VMOpt CLI - Monitor & Optimize VMware recource usage",
-	Long:  "VMOpt is a CLI tool written in Go for monitoring and opimizing CPU/RAM usage of VMware wokrstation virtual machines.",
+	Long:  "VMOpt is a CLI tool written in Go for monitoring and opimizing CPU/RAM usage of VMware workstation virtual machines. Copyright by Neville Laia",
 }
 
 func Execute() error {
