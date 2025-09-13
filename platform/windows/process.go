@@ -14,7 +14,7 @@ func NewWindowsProcessManager() *WindowsProcessManager {
 	return &WindowsProcessManager{}
 }
 
-func (pm *WindowsProcessManager) Setpriority(pid int32, level int) error {
+func (pm *WindowsProcessManager) SetPriority(pid int32, level int) error {
 	h, err := windows.OpenProcess(windows.PROCESS_SET_INFORMATION, false, uint32(pid))
 	if err != nil {
 		return err
