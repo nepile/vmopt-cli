@@ -31,6 +31,7 @@ VMware Optimizer CLI
 
 4. Build the executable:
 
+
    ```bash
    go build -o vmopt
    ```
@@ -46,7 +47,7 @@ VMware Optimizer CLI
 ### General format:
 
 ```bash
-./vmopt [flags]
+./vmopt [args] [flags]
 ```
 
 ### Available Args
